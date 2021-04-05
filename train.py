@@ -139,7 +139,7 @@ if __name__=='__main__':
     
     for _ in tqdm(range(config.NUM_ITERATIONS),total=config.NUM_ITERATIONS):
             # Collect a few steps using collect_policy and save to the replay buffer.
-            for _ in range(collect_steps_per_iteration):
+            for _ in range(config.COLLECT_STEPS_PER_ITERATION):
                 collect_step(train_env, tf_agent.collect_policy, replay_buffer)
 
             # Sample a batch of data from the buffer and update the agent's network.
@@ -153,7 +153,7 @@ if __name__=='__main__':
 
             if step % config.EVAL_INTERVAL == 0:
                 avg_return = compute_avg_return(eval_env, tf_agent.policy, \
-                                                num_eval_episodes)
+                                                config.NUM_EVAL_EPISODES)
                 print('step = {0}: Average Return = {1}'.format(step, avg_return))
                 logging.info('step = {0}: Average Return = {1}'.format(step, avg_return))
                 returns.append(avg_return)
