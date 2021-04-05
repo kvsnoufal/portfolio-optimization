@@ -136,7 +136,7 @@ if __name__=='__main__':
     avg_return = compute_avg_return(eval_env, tf_agent.policy, \
                                     config.NUM_EVAL_EPISODES)
     returns = [avg_return]
-    
+    iterations=[0]
     for _ in tqdm(range(config.NUM_ITERATIONS),total=config.NUM_ITERATIONS):
             # Collect a few steps using collect_policy and save to the replay buffer.
             for _ in range(config.COLLECT_STEPS_PER_ITERATION):
