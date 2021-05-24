@@ -12,6 +12,7 @@ python train.py
 ```
 
 To download data: https://www.dropbox.com/s/jy1bid7tcg0vv4n/cleaned_preprocessed.csv?dl=0
+Take a look at pre_process.py if you want to get an idea on how this file was cleaned and compiled.
 
 
 ## Problem Statement
