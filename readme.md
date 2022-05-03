@@ -11,7 +11,10 @@ To train RL model:
 python train.py
 ```
 
-To download data: https://www.dropbox.com/s/jy1bid7tcg0vv4n/cleaned_preprocessed.csv?dl=0
+To download data: 
+1. https://www.mediafire.com/file/xivks3xf64b83ph/cleaned_preprocessed.csv/file
+2. https://www.mediafire.com/file/g05yja1uiilhfuu/cleaned.csv/file
+
 Take a look at pre_process.py if you want to get an idea on how this file was cleaned and compiled.
 
 
